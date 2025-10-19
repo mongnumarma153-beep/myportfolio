@@ -23,13 +23,45 @@
         }
         
         nav.scrolled {
-            background-color: white !important;
+            background-color: #D97706 !important;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
+
+        /* When navbar is scrolled and has an amber background, make links and logo white for contrast */
+        nav.scrolled .nav-link,
+        nav.scrolled .text-2xl,
+        nav.scrolled .nav-link a {
+            color: #ffffff !important;
+        }
+
+        nav.scrolled .nav-link.active {
+            color: rgba(255,255,255,0.95) !important;
+        }
+
+        nav.scrolled .nav-link.active::after {
+            background-color: rgba(255,255,255,0.9);
+        }
         
+        /* Make navbar amber by default (always show the accent color) */
         nav.transparent {
-            background-color: transparent !important;
+            background-color: #D97706 !important;
             box-shadow: none;
+        }
+
+        /* Default navbar text/logo color when navbar is amber */
+        nav .nav-link,
+        nav .text-2xl,
+        nav .nav-link a {
+            color: #ffffff !important;
+        }
+
+        nav .nav-link.active {
+            color: rgba(255,255,255,0.95) !important;
+            font-weight: 600;
+        }
+
+        nav .nav-link.active::after {
+            background-color: rgba(255,255,255,0.9);
         }
         
         .nav-link {
